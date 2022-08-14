@@ -87,7 +87,7 @@ app.delete("/paintings/:id", async (req, res) => {
 });
 
 // UPDATE ROUTE
-app.put("/paintings/edit/:id", async (req, res) => {
+app.put("/paintings/:id", async (req, res) => {
   try {
     res.json(
       await Painting.findByIdAndUpdate(req.params.id, req.body, { new: true })
